@@ -1,2 +1,2 @@
 # gdrive-upload
-Python script to auth and upload to Google Drive using a service account
+Python script to zip up directories and upload to Google Drive using a service account
