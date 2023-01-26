@@ -1,0 +1,31 @@
+#Requires Google client libraries for Python 
+
+
+########    Create a folder ###########
+
+def create_folder(service, name): 
+
+  folder_metadata = {
+    'name': name, 
+    'mimeType' : 'application/vnd.google-apps.folder'
+  }
+
+  return service.files().create(fileId=folder_id, fields='id').execute()
+  
+  
+
+  
+  ####### Share a file / set initial permissions on a file or folder ##########
+  # ie. set_permission(service, file, "jane@google.com", "user", "writer"
+  
+  def set_permission(service, file, emailAddress, type, role): 
+    file_id = file.get('id')
+    permission = {
+      'emailAddress' : emailAddress, 
+      'type' : type, 
+      'role': role
+    }
+   
+    return service.permissions.create(fileId=file_id, body=permissions).execute()
+
+    
