@@ -11,4 +11,5 @@ common-gdrive-functions.txt - code snippets in case we need to create folders or
 
 Notes: 
   - service accounts cred json file won't be OAuth (clientid + secret), it will be an actual service account within GCP
+  - this script is dependent on the Google Client Library for Python to be installed on the local system (pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthli)
 
